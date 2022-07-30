@@ -1,6 +1,13 @@
 import React from "react";
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { Login, Home } from "../screens";
+import {
+  Login,
+  Home,
+  AdoptionList,
+  Profile,
+  SendingMessages,
+  SignUp
+} from "../screens";
 
 interface RoutesProps {
     path:string;
@@ -11,7 +18,11 @@ interface RoutesProps {
 
 const routes: RoutesProps[] = [
   {path: '/home', component: Home, private: false},
-  {path: '/login', component: Login, private: false}
+  {path: '/login', component: Login, private: false},
+  {path: '/adoption-list', component: AdoptionList, private: false},
+  {path: '/profile', component: Profile, private: false},
+  {path: '/sending-messages', component: SendingMessages, private: false},
+  {path: '/sign-up', component: SignUp, private: false},
 ]
 
 const Routes: React.FC = () => {
