@@ -14,9 +14,11 @@ export const Wrapper = styled.div`
     transform: scale(1);
   }
 
-  @media screen and (max-width:560px) {
+  @media screen and (max-width:720px) {
     .IconLogo {
       position: absolute;
+      min-height: 31px;
+      min-width: 128px;
       opacity: 0;
       transition: all 0.5s;
       transform: scale(0);

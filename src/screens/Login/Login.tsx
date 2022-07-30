@@ -1,7 +1,7 @@
 import React from 'react'
 // formik:
 import { useFormik } from 'formik';
-import { Button } from '../../components/Button'
+// import { Button } from '../../components/Button'
 import { InputRounded } from '../../components'
 import Logo from '../../assets/zoomLogo.png'
 
@@ -55,16 +55,7 @@ const Login: React.FC = () => {
               placeholder='*******'
               touched={false}
             />
-            <Button
-              disabled={false}
-              external
-              type="submit"
-              variant="primaryLight"
-              size="medium"
-            >
-              Efetuar Login
-            </Button>
-          </SectionLogin>
+            </SectionLogin>
         </ContainerLogin>
       </ContainerMain>
     </Wrapper>

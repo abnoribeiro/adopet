@@ -1,66 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-interface Props {
-  variant: string;
-  disabled: boolean;
-  isLoading: boolean;
+interface PropsButton {
+  sizeButton?: string;
 }
 
-const ButtonStyles = styled.div<Props>`
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+export const ButtonInput = styled.button<PropsButton>`
+  width: ${({sizeButton})=>sizeButton === 'defalt' ? '362px':'180px'};
+  height: 48px;
+  border-radius: 6px;
+  background: #FC7071;
+  color: #FFFFFF;
 
-  button,
-  a {
-    width: 207px;
-    height: 48px;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    line-height: 19px;
-    letter-spacing: 0px;
-    text-align: center;
-    transition: 0.3s;
-    cursor: pointer;
-
-    &.disabled {
-      cursor: not-allowed;
-    }
-  }
-
-  .loading-container {
-    svg {
-      height: 40px;
-    }
-  }
-
-  &.smaller {
-    button,
-    a {
-      width: 119px;
-      height: 48px;
-    }
-  }
-
-  &.small {
-    button,
-    a {
-      width: 270px;
-      height: 40px;
-    }
-  }
-
-  &.full {
-    width: 100%;
-    height: 48px;
-    button,
-    a {
-      width: 100%;
-      height: 48px;
-    }
-  }
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 `;
-
-export default ButtonStyles;

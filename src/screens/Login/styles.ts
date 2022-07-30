@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import * as InputRounded from '../../components/InputRounded/InputRounded.styles';
-import * as Button from '../../components/Button/Button.styles';
 
 import arrow from '../../assets/arrow.png'
 
@@ -47,17 +46,6 @@ export const SectionLogin = styled.form`
 
   ${InputRounded.Wrapper} {
     width: 100%;
-  }
-
-  ${Button.default} {
-    margin-top: 24px;
-    width: 100%;
-    button {
-      width: 100%;
-      font-family: 'Comfortaa';
-      font-size: 14px;
-      font-weight: 900;
-    }
   }
 `;
 
