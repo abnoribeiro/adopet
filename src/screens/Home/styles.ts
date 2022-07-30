@@ -47,6 +47,15 @@ export const MainContainer = styled.main`
   .logo {
     width: 187px !important;
     height: 48px;
+    opacity: 1;
+    transition: all 0.5s;
+    transform: scale(1);
+
+    @media screen and (min-width:720px) {
+      opacity: 0;
+      transition: all 0.5s;
+      transform: scale(0);
+    }
   }
 
   p {
@@ -75,6 +84,13 @@ export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  button {
+    @media screen and (max-width:720px) {
+      width: 180px;
+      height: 40px;
+    }
+  }
 `;
 
 export const ContainerFooter = styled.div`

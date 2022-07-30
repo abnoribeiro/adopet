@@ -20,7 +20,7 @@ const Header: React.FC = ()=>{
       >
         <IconMessage/>
       </HeaderButton>
-      <ContainerUserProfile>
+      {/* <ContainerUserProfile>
         <HeaderButton
           onClick={()=>{
             console.log("HeaderButton")
@@ -28,7 +28,7 @@ const Header: React.FC = ()=>{
         >
           <IconUserDefault/>
         </HeaderButton>
-      </ContainerUserProfile>
+      </ContainerUserProfile> */}
     </Wrapper>
   );
 }
