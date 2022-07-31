@@ -1,74 +1,110 @@
 import styled from 'styled-components';
 
-import * as InputRounded from '../../components/InputRounded/InputRounded.styles';
-
-import arrow from '../../assets/arrow.png'
-
 export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
-    font-family: 'Comfortaa';
 `;
 
-export const ContainerMain = styled.div`
+export const ContainerSplashs = styled.div`
+    .splash-top-image {
+      position: absolute;
+    }
+    .splash-rigth-image {
+      position: absolute;
+      left: 0;
+      top: 350px;
+
+      width: 84.03px;
+      height: 415px;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    @media screen and (max-width: 720px) {
+      .splash-top-image {
+        max-width: 352.11px;
+        max-height: 295px;
+      }
+    }
+`;
+
+export const Container = styled.div`
+  z-index: 1;
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
 `;
 
-export const ContainerLogo = styled.div`
-  width: 50%;
-  background-color: #dbe0e8;
-  background-image: url(${arrow});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-`;
-
-export const ContainerLogin = styled.div`
+export const MainContainer = styled.main`
   display: flex;
-  width: 50%;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
-`;
+  margin-top: auto;
 
-export const SectionLogin = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 512px;
-  min-height: 550px;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+  .logo {
+    width: 142.54px;
+    height: 34.36px;
+    opacity: 1;
+    transition: all 0.5s;
+    transform: scale(1);
 
-  ${InputRounded.Wrapper} {
-    width: 100%;
+    path {
+      fill:#3772FF;
+    }
+
+    @media screen and (min-width:720px) {
+
+      opacity: 0;
+      transition: all 0.5s;
+      transform: scale(0);
+    }
+  }
+
+  p {
+    color: #3772FF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 248px;
+    text-align: center;
+    margin-bottom: 24px;
+    margin-top: 16px;
+
   }
 `;
 
-export const PageTitle = styled.h1`
-  font-weight: 900;
-  font-size: 24px;
+export const Subtitle = styled.h2`
+  color: #FFFFFF;
+  font-size: 26px;
+  font-family: 'IBM Plex Sans';
+  font-weight: 500;
 
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 16px;
 `;
 
-export const PageDescription = styled.p`
-  max-width: 350px;
-  font-weight: 700;
-  font-size: 16px;
+export const ContainerButtons = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
+  button {
+    @media screen and (max-width:720px) {
+      width: 180px;
+      height: 40px;
+    }
+  }
+`;
+
+export const ContainerFooter = styled.div`
   text-align: center;
-`;
+  margin-top: auto;
+  margin-bottom: -20px;
 
-export const LogoProduct = styled.img`
-  max-width: 120px;
-`;
-
-
-
-export const ContainerButton = styled.div`
+  .icon-cat-and-dog {
+    margin-left: -30px;
+  }
 `;

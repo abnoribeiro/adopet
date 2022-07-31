@@ -32,7 +32,11 @@ const Home: React.FC = () => {
             >
               Já tenho conta
             </Button>
-            <Button>
+            <Button
+              onClick={()=>{
+                history.push('/sign-up');
+              }}
+            >
               Quero me cadastrar
             </Button>
           </ContainerButtons>
